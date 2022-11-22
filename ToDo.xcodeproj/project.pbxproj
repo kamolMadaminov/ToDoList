@@ -18,6 +18,8 @@
 		CEB4D640292CDDAB004CA028 /* PriorityEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB4D63F292CDDAB004CA028 /* PriorityEnum.swift */; };
 		CEB4D642292CDDFE004CA028 /* TaskGroupDM.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB4D641292CDDFE004CA028 /* TaskGroupDM.swift */; };
 		CEB4D644292CDE48004CA028 /* GroupTypeEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB4D643292CDE48004CA028 /* GroupTypeEnum.swift */; };
+		CEB4D647292CE5E5004CA028 /* AddTaskVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB4D645292CE5E5004CA028 /* AddTaskVC.swift */; };
+		CEB4D648292CE5E5004CA028 /* AddTaskVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEB4D646292CE5E5004CA028 /* AddTaskVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		CEB4D63F292CDDAB004CA028 /* PriorityEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriorityEnum.swift; sourceTree = "<group>"; };
 		CEB4D641292CDDFE004CA028 /* TaskGroupDM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskGroupDM.swift; sourceTree = "<group>"; };
 		CEB4D643292CDE48004CA028 /* GroupTypeEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupTypeEnum.swift; sourceTree = "<group>"; };
+		CEB4D645292CE5E5004CA028 /* AddTaskVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskVC.swift; sourceTree = "<group>"; };
+		CEB4D646292CE5E5004CA028 /* AddTaskVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddTaskVC.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +86,8 @@
 			children = (
 				CEB4D632292CCEEE004CA028 /* HomeVC.swift */,
 				CEB4D633292CCEEE004CA028 /* HomeVC.xib */,
+				CEB4D645292CE5E5004CA028 /* AddTaskVC.swift */,
+				CEB4D646292CE5E5004CA028 /* AddTaskVC.xib */,
 			);
 			path = VCs;
 			sourceTree = "<group>";
@@ -168,6 +174,7 @@
 				CEB4D62B292CCEA2004CA028 /* LaunchScreen.storyboard in Resources */,
 				CEB4D635292CCEEE004CA028 /* HomeVC.xib in Resources */,
 				CEB4D628292CCEA2004CA028 /* Assets.xcassets in Resources */,
+				CEB4D648292CE5E5004CA028 /* AddTaskVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -185,6 +192,7 @@
 				CEB4D644292CDE48004CA028 /* GroupTypeEnum.swift in Sources */,
 				CEB4D634292CCEEE004CA028 /* HomeVC.swift in Sources */,
 				CEB4D63E292CDD5A004CA028 /* TaskDM.swift in Sources */,
+				CEB4D647292CE5E5004CA028 /* AddTaskVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,6 +338,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -357,6 +366,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

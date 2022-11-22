@@ -23,6 +23,9 @@ class HomeVC: UIViewController {
     }
 
     @IBAction func addTapped(_ sender: Any) {
+        let vc = AddTaskVC(nibName: "AddTaskVC", bundle: nil)
+        vc.modalPresentationStyle = .overFullScreen
+        self.present(vc, animated: false)
     }
     
 }
@@ -30,7 +33,7 @@ class HomeVC: UIViewController {
 
 extension HomeVC: UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        <#code#>
+        //
     }
 }
 extension HomeVC: UITableViewDataSource{
