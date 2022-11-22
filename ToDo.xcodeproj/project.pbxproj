@@ -12,6 +12,12 @@
 		CEB4D62B292CCEA2004CA028 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEB4D629292CCEA2004CA028 /* LaunchScreen.storyboard */; };
 		CEB4D634292CCEEE004CA028 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB4D632292CCEEE004CA028 /* HomeVC.swift */; };
 		CEB4D635292CCEEE004CA028 /* HomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEB4D633292CCEEE004CA028 /* HomeVC.xib */; };
+		CEB4D63A292CDC9D004CA028 /* TaskTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB4D638292CDC9D004CA028 /* TaskTVC.swift */; };
+		CEB4D63B292CDC9D004CA028 /* TaskTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEB4D639292CDC9D004CA028 /* TaskTVC.xib */; };
+		CEB4D63E292CDD5A004CA028 /* TaskDM.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB4D63D292CDD5A004CA028 /* TaskDM.swift */; };
+		CEB4D640292CDDAB004CA028 /* PriorityEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB4D63F292CDDAB004CA028 /* PriorityEnum.swift */; };
+		CEB4D642292CDDFE004CA028 /* TaskGroupDM.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB4D641292CDDFE004CA028 /* TaskGroupDM.swift */; };
+		CEB4D644292CDE48004CA028 /* GroupTypeEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB4D643292CDE48004CA028 /* GroupTypeEnum.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +28,12 @@
 		CEB4D62C292CCEA2004CA028 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CEB4D632292CCEEE004CA028 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		CEB4D633292CCEEE004CA028 /* HomeVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeVC.xib; sourceTree = "<group>"; };
+		CEB4D638292CDC9D004CA028 /* TaskTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTVC.swift; sourceTree = "<group>"; };
+		CEB4D639292CDC9D004CA028 /* TaskTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TaskTVC.xib; sourceTree = "<group>"; };
+		CEB4D63D292CDD5A004CA028 /* TaskDM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDM.swift; sourceTree = "<group>"; };
+		CEB4D63F292CDDAB004CA028 /* PriorityEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriorityEnum.swift; sourceTree = "<group>"; };
+		CEB4D641292CDDFE004CA028 /* TaskGroupDM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskGroupDM.swift; sourceTree = "<group>"; };
+		CEB4D643292CDE48004CA028 /* GroupTypeEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupTypeEnum.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,13 +67,43 @@
 			isa = PBXGroup;
 			children = (
 				CEB4D61E292CCEA1004CA028 /* AppDelegate.swift */,
-				CEB4D632292CCEEE004CA028 /* HomeVC.swift */,
-				CEB4D633292CCEEE004CA028 /* HomeVC.xib */,
+				CEB4D63C292CDD45004CA028 /* Models */,
+				CEB4D637292CDC6E004CA028 /* TVCs */,
+				CEB4D636292CDC5B004CA028 /* VCs */,
 				CEB4D629292CCEA2004CA028 /* LaunchScreen.storyboard */,
 				CEB4D627292CCEA2004CA028 /* Assets.xcassets */,
 				CEB4D62C292CCEA2004CA028 /* Info.plist */,
 			);
 			path = ToDo;
+			sourceTree = "<group>";
+		};
+		CEB4D636292CDC5B004CA028 /* VCs */ = {
+			isa = PBXGroup;
+			children = (
+				CEB4D632292CCEEE004CA028 /* HomeVC.swift */,
+				CEB4D633292CCEEE004CA028 /* HomeVC.xib */,
+			);
+			path = VCs;
+			sourceTree = "<group>";
+		};
+		CEB4D637292CDC6E004CA028 /* TVCs */ = {
+			isa = PBXGroup;
+			children = (
+				CEB4D638292CDC9D004CA028 /* TaskTVC.swift */,
+				CEB4D639292CDC9D004CA028 /* TaskTVC.xib */,
+			);
+			path = TVCs;
+			sourceTree = "<group>";
+		};
+		CEB4D63C292CDD45004CA028 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CEB4D63D292CDD5A004CA028 /* TaskDM.swift */,
+				CEB4D63F292CDDAB004CA028 /* PriorityEnum.swift */,
+				CEB4D641292CDDFE004CA028 /* TaskGroupDM.swift */,
+				CEB4D643292CDE48004CA028 /* GroupTypeEnum.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -122,6 +164,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEB4D63B292CDC9D004CA028 /* TaskTVC.xib in Resources */,
 				CEB4D62B292CCEA2004CA028 /* LaunchScreen.storyboard in Resources */,
 				CEB4D635292CCEEE004CA028 /* HomeVC.xib in Resources */,
 				CEB4D628292CCEA2004CA028 /* Assets.xcassets in Resources */,
@@ -135,8 +178,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEB4D63A292CDC9D004CA028 /* TaskTVC.swift in Sources */,
+				CEB4D642292CDDFE004CA028 /* TaskGroupDM.swift in Sources */,
 				CEB4D61F292CCEA1004CA028 /* AppDelegate.swift in Sources */,
+				CEB4D640292CDDAB004CA028 /* PriorityEnum.swift in Sources */,
+				CEB4D644292CDE48004CA028 /* GroupTypeEnum.swift in Sources */,
 				CEB4D634292CCEEE004CA028 /* HomeVC.swift in Sources */,
+				CEB4D63E292CDD5A004CA028 /* TaskDM.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
