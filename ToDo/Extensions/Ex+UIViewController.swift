@@ -51,11 +51,9 @@ extension UIViewController {
             alertVC.addAction(finishedBtn)
             alertVC.addAction(archivedBtn)
         case .archived:
-            alertVC.addAction(finishedBtn)
             alertVC.addAction(unarchivedBtn)
         case .finished:
             alertVC.addAction(unfinishedBtn)
-            alertVC.addAction(archivedBtn)
         case .unarchived:
             print("unarchived")
         case .unFinished:

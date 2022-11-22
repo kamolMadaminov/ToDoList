@@ -35,21 +35,73 @@ class HomeVC: UIViewController {
     
 }
 
-
+//MARK: - UITableViewDelegate
 extension HomeVC: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let group = groupTasks[indexPath.section]
-        showAlert(groupType: group.groupType, title: "Choose What to do", message: nil, type: .actionSheet) { groupType in
+        showAlert(groupType: group.groupType, title: "Choose What to do", message: nil, type: .actionSheet) { [self] groupType in
             
             guard let groupType = groupType else { return }
             print("type = ",groupType.rawValue)
             
+            switch groupType {
+            case .new:
+                 print("new")
+            case .archived:
+                let archivedTask = self.groupTasks[indexPath.section].tasks.remove(at: indexPath.row)
+                groupTasks[1].tasks.append(archivedTask)
+            case .finished:
+                let finishedTask = self.groupTasks[indexPath.section].tasks.remove(at: indexPath.row)
+                groupTasks[2].tasks.append(finishedTask)
+            case .unarchived:
+                let unarchivedTask = self.groupTasks[indexPath.section].tasks.remove(at: indexPath.row)
+                groupTasks[0].tasks.append(unarchivedTask)
+            case .unFinished:
+                let unfinishedTask = self.groupTasks[indexPath.section].tasks.remove(at: indexPath.row)
+                groupTasks[0].tasks.append(unfinishedTask)
+            case .deleted:
+                self.groupTasks[indexPath.section].tasks.remove(at: indexPath.row)
+            }
+            self.tableV.reloadData()
         }
+        
+    }
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let v = UIView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: 30 ))
+        v.backgroundColor = .white
+        
+        let lbl = UILabel(frame: CGRect(x: 0, y: 0, width: 130, height: 30))
+        lbl.text = groupTasks[section].groupType.rawValue.capitalized + " Tasks"
+        lbl.layer.cornerRadius = 15
+        lbl.textColor = .green
+        lbl.font = .boldSystemFont(ofSize: 17)
+        lbl.textAlignment = .center
+        lbl.backgroundColor = .systemGray6
+        
+        v.addSubview(lbl)
+        lbl.center = v.center
+        
+        return v
+    }
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        let group = groupTasks[section]
+        if group.tasks.isEmpty { return 0 } else { return 30 }
+    }
+    
+    func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let deleteBtn = UIContextualAction(style: .destructive, title: "Delete") { _, _, _ in
+            self.groupTasks[indexPath.section].tasks.remove(at: indexPath.row)
+            self.tableV.reloadData()
+        }
+        let config = UISwipeActionsConfiguration(actions: [deleteBtn])
+        return config
     }
     
 }
 
+
+//MARK: - UITableViewDataSource
 extension HomeVC: UITableViewDataSource {
     
     func setUpTableView() {
