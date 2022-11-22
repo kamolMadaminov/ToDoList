@@ -5,15 +5,17 @@
 //  Created by Kamol Madaminov on 22/11/22.
 //
 
+
 import UIKit
 
 class TaskTVC: UITableViewCell {
-
+    
     static let identifier: String = "TaskTVC"
+    
     static func nib() -> UINib {
         UINib(nibName: "TaskTVC", bundle: nil)
     }
-    
+
     @IBOutlet weak var titleLbl: UILabel!
     @IBOutlet weak var subTitleLbl: UILabel!
     @IBOutlet weak var priorityV: UIView!
@@ -21,24 +23,14 @@ class TaskTVC: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        selectionStyle = .none
     }
     
-    func updateCell(task: TaskDM, groupType: GroupTypeEnum){
+    func updateCell(task: TaskDM, groupType: GroupTypeEnum) {
+        
         titleLbl.text = task.title
         subTitleLbl.text = task.subTitle
-        
-        
-        switch task.priority {
-        case .high:
-            priorityV.backgroundColor = .red
-        case .medium:
-            priorityV.backgroundColor = .yellow
-        case .low:
-            priorityV.backgroundColor = .green
-        case .none:
-            priorityV.backgroundColor = .gray
-        }
-        
+        priorityV.backgroundColor = task.priority.setPriorityColor()
         
         switch groupType {
         case .new:
@@ -47,9 +39,16 @@ class TaskTVC: UITableViewCell {
             typeView.backgroundColor = .systemGray4
         case .finished:
             typeView.backgroundColor = .systemGray2
+        case .unarchived:
+            print("unarchived")
+        case .unFinished:
+            print("unFinished")
+        case .deleted:
+            print("deleted")
         }
         
     }
+    
     
     
 }

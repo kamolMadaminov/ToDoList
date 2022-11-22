@@ -8,5 +8,5 @@
 import Foundation
 
 enum GroupTypeEnum: String {
-    case new, archived, finished
+    case new, archived, finished, unarchived, unFinished, deleted
 }
